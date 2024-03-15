@@ -12,9 +12,8 @@ import Textarea from "react-textarea-autosize";
 import { toast } from "sonner";
 
 const examples = [
-  "Get me the top 5 stories on Hacker News in markdown table format. Use columns like title, link, score, and comments.",
-  "Summarize the comments in the top hacker news story.",
-  "What is the top story on Hacker News right now?",
+  "Get the weather for kayaking in Oakland, CA",
+  "Get the weather for kayaking with city and state"
 ];
 
 export default function Chat() {
@@ -32,6 +31,7 @@ export default function Chat() {
       }
     },
     onError: (error) => {
+      console.log(error);
       va.track("Chat errored", {
         input,
         error: error.message,
@@ -100,12 +100,12 @@ export default function Chat() {
         <div className="border-gray-200sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border sm:w-full">
           <div className="flex flex-col space-y-4 p-7 sm:p-10">
             <h1 className="text-lg font-semibold text-black">
-              Welcome to ChatHN!
+              Welcome to Chat Weather!
             </h1>
             <p className="text-gray-500">
               This is an{" "}
               <a
-                href="https://github.com/steven-tey/chathn"
+                href="https://github.com/debbly/chatweather"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
@@ -132,12 +132,12 @@ export default function Chat() {
               </a>{" "}
               to interact with the{" "}
               <a
-                href="https://github.com/HackerNews/API"
+                href="https://openweathermap.org/current"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
-                Hacker News API
+                OpenWeather API
               </a>{" "}
               with natural language.
             </p>
@@ -224,7 +224,7 @@ export default function Chat() {
           </a>
           .{" "}
           <a
-            href="https://github.com/steven-tey/chathn"
+            href="https://github.com/debbly/chatweather"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-black"
@@ -233,7 +233,7 @@ export default function Chat() {
           </a>{" "}
           or{" "}
           <a
-            href="https://vercel.com/templates/next.js/chathn"
+            href="https://vercel.com/templates/next.js/chatweather"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-black"

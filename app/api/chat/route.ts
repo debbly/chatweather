@@ -27,7 +27,7 @@ export async function POST(req: Request) {
     });
 
     const { success, limit, reset, remaining } = await ratelimit.limit(
-      `chathn_ratelimit_${ip}`,
+      `chatweather_ratelimit_${ip}`,
     );
 
     if (!success) {
@@ -46,7 +46,7 @@ export async function POST(req: Request) {
 
   // check if the conversation requires a function call to be made
   const initialResponse = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo-0613",
+    model: "gpt-3.5-turbo",
     messages,
     stream: true,
     functions,
@@ -58,10 +58,11 @@ export async function POST(req: Request) {
       { name, arguments: args },
       createFunctionCallMessages,
     ) => {
+      console.log(initialResponse);
       const result = await runFunction(name, args);
       const newMessages = createFunctionCallMessages(result);
       return openai.chat.completions.create({
-        model: "gpt-3.5-turbo-0613",
+        model: "gpt-3.5-turbo",
         stream: true,
         messages: [...messages, ...newMessages],
       });
