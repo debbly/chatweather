@@ -8,18 +8,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/debbly/chatweather/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/debbly/chatweather?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
-  </a>
-  <a href=""><img src="https://img.shields.io/github/stars/debbly/chatweather?style=social" alt="ChatWeather's GitHub repo"></a>
-</p>
-
-<p align="center">
   <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
   <a href="#setting-up-locally"><strong>Setting Up Locally</strong></a> ·
   <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-  <a href="#contributing"><strong>Contributing</strong></a> ·
   <a href="#license"><strong>License</strong></a>
 </p>
 <br/>
@@ -28,14 +19,8 @@
 
 Test weather is an open-source AI chatbot that uses [OpenAI Functions](https://platform.openai.com/docs/guides/gpt/function-calling) and the [Vercel AI SDK](https://sdk.vercel.ai/docs) to interact with the [OpenWeather API](https://openweathermap.org/) with natural language.
 
-based off of this repo by steven-tey: 
+based off of this example by steven-tey: 
 https://github.com/steven-tey/chathn/assets/28986134/9c0ad554-f4e5-4e98-8771-5999ddf79235
-
-## Deploy your own
-
-You can deploy your own version of ChatWeather with 1-click:
-
-[![Deploy with Vercel](https://vercel.com/button)]()
 
 ## Setting Up Locally
 
@@ -60,4 +45,4 @@ ChatWeather is built on the following stack:
 
 ## License
 
-Licensed under the [MIT license](https://github.com/debbly/chathn/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/debbly/chatweather/blob/main/LICENSE.md).

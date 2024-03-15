@@ -13,7 +13,7 @@ import { toast } from "sonner";
 
 const examples = [
   "Get the weather for kayaking in Oakland, CA",
-  "Get the weather for kayaking with city and state"
+  "Get the weather for kayaking for a specified location - (city, state, and country)!"
 ];
 
 export default function Chat() {
